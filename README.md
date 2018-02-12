@@ -23,3 +23,8 @@ Make sure all files (mastermind.c, mastermind.h and main.c) are in one directory
 ```
 gcc -o mastermind mastermind.c main.c -Wall -lcurses
 ```
+Now run it with following command:
+
+```
+./mastermind
+```
