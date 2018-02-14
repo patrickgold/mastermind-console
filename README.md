@@ -12,10 +12,12 @@ Just copy all three files (mastermind.c, mastermind.h and main.c) in a VS Projec
 
 ### Compiling and running MasterMind in Linux
 
-On Linux machines we use the curses library. In order to compile MasterMind, make sure the curses library is installed:
+On Linux machines we use the curses library. In order to compile MasterMind, make sure the curses developer library is installed. The package name may differ on each system, but here are the commands and the package name(s) for _apt_, _dnf_ and _yum_:
 
 ```
-$ sudo apt-get update && sudo apt-get install libncurses5-dev libncursesw5-dev
+$ sudo apt-get install libncurses5-dev libncursesw5-dev -y
+$ sudo dnf install ncurses-devel -y
+$ sudo yum install ncurses-devel -y
 ```
 
 Make sure all files (mastermind.c, mastermind.h and main.c) are in one directory and compile it with gcc:
