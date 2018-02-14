@@ -6,9 +6,12 @@
 
 #pragma once
 
+// include guard which prevents double including
 #ifndef MASTERMIND_H
 #define MASTERMIND_H
 
+// this defines the maximum and minimum 
+// values of the preferences of the game  
 #define MMPREFS_MIN_CODE_LENGTH 2
 #define MMPREFS_MAX_CODE_LENGTH 8
 #define MMPREFS_MIN_COLOR_COUNT 4
@@ -17,6 +20,7 @@
 #define MMPREFS_MAX_ATTEMPT_COUNT 12
 #define MM_COLOR_BGFG 0xF0
 
+// this defines the frame for the game in Windows
 #if defined(_WIN32) || defined(_WIN64)
     #define __usingwindows__ 1
     #define MMKEY_BACKSPACE '\b'
@@ -32,6 +36,7 @@
     #define MMFRAME_TITLE_LEFT 185
     #define MMFRAME_TITLE_RIGHT 204
     typedef enum { false, true } bool;
+// this defines the frame for the game in Linux
 #elif defined(__linux__) || defined(__linux) || defined(linux)
     #define __usinglinux__ 1
     #define MMKEY_BACKSPACE '\b'
@@ -47,12 +52,14 @@
     #include <stdbool.h>
 #endif
 
+// these are the preferences, which you will change in the settings
 typedef struct {
     unsigned int code_length; // 2 - 8
     unsigned int color_count; // 4 - 8
     unsigned int attempt_count; // 3 - 12
     bool multiple_colors; // false - true
     bool hints_position_based; // false - true
+	bool __comsolve__;
 } MASTERMIND_PREFERENCES;
 
 /// <summary>Manages which action has to be done.</summary>
@@ -61,4 +68,5 @@ typedef struct {
 /// <returns>Gives back an integer value of 0.</returns>
 int mastermind(MASTERMIND_PREFERENCES initprefs, bool start_game_direct);
 
+// end of MASTERMIND_H include guard
 #endif
