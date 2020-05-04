@@ -4,8 +4,6 @@ This repository shows how the game MasterMind could look like in terminal/consol
 
 ## How to build this project
 
-Currently the project is only written in C and can be compiled both on Windows and Linux machines, but in near future it will also be present in other programming languages like C++, C# and of course Python.
-
 ### Compiling in Visual Studio 2017
 
 Just copy all three files (mastermind.c, mastermind.h and main.c) in a VS Project and then run the code with hitting F5.
